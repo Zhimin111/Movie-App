@@ -24,20 +24,19 @@
 					<table class="table table-striped table-sm">
 						<thead>
 							<tr>
-								<th>Movie Name </th>
-    							<th>Release Date </th>
-    							<th>Movie id</th>
+								<th>Rating</th>
+    							<th>Comment Title </th>
+    							<th>Comment Content</th>
     							<th>User id</th>
-    							<th>Seen date</th>
+    							
 							</tr>
 						</thead>
 						<tbody>
-							<tr th:each="movie : ${moviesList}">
-		    				<td><span th:text="${movie.title}">Movie_Title</span></td>
-		    				<td><span th:text="${movie.releaseDate}">Movie_ReleaseDate</span></td>   			
-		    				<td><span th:text="${movie.movieid}">Movie_Movieid</span></td>
-		    				<td><span th:text="${movie.userid}">Movie_Userid</span></td>
-		    				<td><span th:text="${movie.seendate}">Movie_Seendate</span></td>
+							<tr th:each="rate : ${ratesList}">
+		    				<td><span th:text="${rate.rating}">Movie_Rating</span></td>
+		    				<td><span th:text="${rate.commenttitle}">Movie_Comment Title</span></td>   			
+		    				<td><span th:text="${rate.commentcontent}">Movie_Comment Content</span></td>
+		    				<td><span th:text="${rate.userid}">Movie_Userid</span></td>		    				
 					
 							</tr>
 						</tbody>

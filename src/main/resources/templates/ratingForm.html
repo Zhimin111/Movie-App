@@ -20,7 +20,12 @@
 				place for the sidebar</div>
 			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 				<h1>Creating Rating</h1>
-				<form action"#" th:action="@{/rating/create}" th:object="${rating}" method="post">
+				<form action"#" th:action="@{/rating/create}" th:object="${rate}" method="post">
+				<p>Rating <input type="text" th:field="*{rating}" /></p>
+			        <p>Comment title <input type="text" th:field="*{title}" /></p>
+			        <p>Comment Content<input type="date" th:field="*{content}" /></p>
+			        <p>User id<input type="int" th:field="*{userid}" /></p>
+			        
 					
 			        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 				</form>
